@@ -1,7 +1,7 @@
 # C Piscine 42 São Paulo - May 2023
 This repository contains the content of the *42's Bootcamp* (known as `piscine`).
 
-## About 42
+## About 
 
 	42 is a global education initiative that proposes a new way of learning technology: no teachers,
 	no classrooms, students learning from their fellow students (peer-to-peer learning), with a
