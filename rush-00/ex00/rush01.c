@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rush01.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: arsobrei <arsobrei@student.42.fr>          +#+  +:+       +#+        */
+/*   By: marvin <marvin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/28 11:04:00 by marvin            #+#    #+#             */
-/*   Updated: 2023/05/29 12:43:55 by arsobrei         ###   ########.fr       */
+/*   Updated: 2023/06/20 20:16:04 by marvin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,23 +69,29 @@ void	rush(int x, int y)
 
 	row = 1;
 	col = 1;
-	print_error(x, y);
-	while (row <= y)
+	if ((y >= 0) && (x >= 0))
 	{
-		while (col <= x)
+		while (row <= y)
 		{
-			if (((y > 2) && (x > 2)) && ((row > 1) && (row < y)))
+			while (col <= x)
 			{
-				print_spaces_between(col, x);
+				if (((y > 2) && (x > 2)) && ((row > 1) && (row < y)))
+				{
+					print_spaces_between(col, x);
+				}
+				else
+				{
+					print_first_last_line(col, row, x, y);
+				}
+				col++;
 			}
-			else
-			{
-				print_first_last_line(col, row, x, y);
-			}
-			col++;
+			ft_putchar('\n');
+			col = 1;
+			row++;
 		}
-		ft_putchar('\n');
-		col = 1;
-		row++;
+	}
+	else
+	{
+		print_error(x, y);	
 	}
 }
