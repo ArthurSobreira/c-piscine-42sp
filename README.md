@@ -1,5 +1,5 @@
 # C Piscine 42 São Paulo - May 2023
-This repository contains the content of the *42's Bootcamp* (known as `piscine`).
+This repository contains the content of the <strong>*42's Bootcamp*</strong> (known as `piscine`).
 
 ## About 
 
